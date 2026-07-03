@@ -75,7 +75,23 @@ activities = {'Chess Club': {'description': 'Learn strategies and compete in che
  'Science Olympiad': {'description': 'Prepare for science competitions through team problem-solving',
                   'schedule': 'Thursdays, 3:30 PM - 5:00 PM',
                   'max_participants': 16,
-                  'participants': []}}
+                  'participants': []},
+ 'Robotics Club': {'description': 'Design, build, and program robots for challenges',
+               'schedule': 'Tuesdays, 4:00 PM - 5:30 PM',
+               'max_participants': 14,
+               'participants': []},
+ 'Creative Writing': {'description': 'Develop storytelling, poetry, and editing skills',
+                  'schedule': 'Wednesdays, 3:30 PM - 5:00 PM',
+                  'max_participants': 12,
+                  'participants': []},
+ 'Music Ensemble': {'description': 'Rehearse and perform as a collaborative school ensemble',
+                'schedule': 'Thursdays, 4:00 PM - 5:30 PM',
+                'max_participants': 20,
+                'participants': []},
+ 'Environmental Club': {'description': 'Lead sustainability projects and campus clean-up efforts',
+                    'schedule': 'Fridays, 2:30 PM - 4:00 PM',
+                    'max_participants': 18,
+                    'participants': []}}
 
 
 @app.get("/")
