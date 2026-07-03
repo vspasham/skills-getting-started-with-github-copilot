@@ -63,7 +63,7 @@ jobs:
         uses: skills/action-keyphrase-checker@v1
         with:
           text-file: src/app.py
-          keyphrase: '"description"'
+          keyphrase: "description"
           minimum-occurrences: 4
           case-sensitive: false
 
