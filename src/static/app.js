@@ -53,13 +53,13 @@ document.addEventListener("DOMContentLoaded", () => {
                       <span>${escapeHtml(participant)}</span>
                       <button
                         type="button"
-                        class="remove-participant-btn"
+                        class="cancel-registration-btn"
                         data-activity="${encodeURIComponent(name)}"
                         data-email="${encodeURIComponent(participant)}"
-                        aria-label="Remove ${escapeHtml(participant)} from ${escapeHtml(name)}"
-                        title="Unregister participant"
+                        aria-label="Cancel registration for ${escapeHtml(participant)} from ${escapeHtml(name)}"
+                        title="Cancel registration"
                       >
-                        Unregister
+                        Cancel Registration
                       </button>
                     </li>
                   `
@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  async function unregisterParticipant(activity, email) {
+  async function cancelRegistration(activity, email) {
     try {
       const response = await fetch(
         `/activities/${encodeURIComponent(activity)}/participants?email=${encodeURIComponent(email)}`,
@@ -109,11 +109,11 @@ document.addEventListener("DOMContentLoaded", () => {
         showMessage(result.message, "success");
         await fetchActivities();
       } else {
-        showMessage(result.detail || "Failed to remove participant", "error");
+        showMessage(result.detail || "Failed to cancel registration", "error");
       }
     } catch (error) {
-      showMessage("Failed to remove participant. Please try again.", "error");
-      console.error("Error removing participant:", error);
+      showMessage("Failed to cancel registration. Please try again.", "error");
+      console.error("Error cancelling registration:", error);
     }
   }
 
@@ -148,21 +148,21 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   activitiesList.addEventListener("click", async (event) => {
-    const removeButton = event.target.closest(".remove-participant-btn");
+    const cancelButton = event.target.closest(".cancel-registration-btn");
 
-    if (!removeButton) {
+    if (!cancelButton) {
       return;
     }
 
-    const activity = decodeURIComponent(removeButton.dataset.activity || "");
-    const email = decodeURIComponent(removeButton.dataset.email || "");
+    const activity = decodeURIComponent(cancelButton.dataset.activity || "");
+    const email = decodeURIComponent(cancelButton.dataset.email || "");
 
     if (!activity || !email) {
-      showMessage("Could not identify participant to remove.", "error");
+      showMessage("Could not identify registration to cancel.", "error");
       return;
     }
 
-    unregisterParticipant(activity, email);
+    cancelRegistration(activity, email);
   });
 
   // Initialize app

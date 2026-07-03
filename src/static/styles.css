@@ -115,7 +115,7 @@ section h3 {
   background-color: #f8faff;
 }
 
-.remove-participant-btn {
+.cancel-registration-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -132,13 +132,13 @@ section h3 {
   transition: transform 0.15s ease, background-color 0.2s ease, border-color 0.2s ease;
 }
 
-.remove-participant-btn:hover {
+.cancel-registration-btn:hover {
   background-color: #ffe4e4;
   border-color: #ea9a9a;
   transform: translateY(-1px);
 }
 
-.remove-participant-btn:focus-visible {
+.cancel-registration-btn:focus-visible {
   outline: 2px solid #b42318;
   outline-offset: 2px;
 }

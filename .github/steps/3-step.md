@@ -91,7 +91,7 @@ Let's use Copilot to change the website to display signed up students under each
 
    > 💡 **Tip:** You can accept the changes directly, modify them, or provide additional instruction to refine them using the chat interface.
 
-### :keyboard: Activity: Use Agent mode to add functional "unregister" buttons
+### :keyboard: Activity: Use Agent mode to add functional "Cancel Registration" buttons
 
 Let's experiment with some more open-ended requests that will add more functionality to our web application.
 
@@ -111,7 +111,7 @@ If you don't get the desired results, you can try other models or provide follow
    >
    > ```prompt
    > #codebase Please add a delete icon next to each participant and hide the bullet points.
-   > When clicked, it will unregister that participant from the activity.
+   > When clicked, it will cancel that participant's registration for the activity.
    > ```
 
    The `#codebase` tool is used by Copilot to find relevant files, code chunks that are relevant to the task at hand.
