@@ -20,26 +20,41 @@ app.mount("/static", StaticFiles(directory=os.path.join(Path(__file__).parent,
           "static")), name="static")
 
 # In-memory activity database
-activities = {
-    "Chess Club": {
-        "description": "Learn strategies and compete in chess tournaments",
-        "schedule": "Fridays, 3:30 PM - 5:00 PM",
-        "max_participants": 12,
-        "participants": ["michael@mergington.edu", "daniel@mergington.edu"]
-    },
-    "Programming Class": {
-        "description": "Learn programming fundamentals and build software projects",
-        "schedule": "Tuesdays and Thursdays, 3:30 PM - 4:30 PM",
-        "max_participants": 20,
-        "participants": ["emma@mergington.edu", "sophia@mergington.edu"]
-    },
-    "Gym Class": {
-        "description": "Physical education and sports activities",
-        "schedule": "Mondays, Wednesdays, Fridays, 2:00 PM - 3:00 PM",
-        "max_participants": 30,
-        "participants": ["john@mergington.edu", "olivia@mergington.edu"]
-    }
-}
+activities = {'Chess Club': {'description': 'Learn strategies and compete in chess tournaments',
+                'schedule': 'Fridays, 3:30 PM - 5:00 PM',
+                'max_participants': 12,
+                'participants': ['michael@mergington.edu', 'daniel@mergington.edu']},
+ 'Programming Class': {'description': 'Learn programming fundamentals and build software projects',
+                       'schedule': 'Tuesdays and Thursdays, 3:30 PM - 4:30 PM',
+                       'max_participants': 20,
+                       'participants': ['emma@mergington.edu', 'sophia@mergington.edu']},
+ 'Gym Class': {'description': 'Physical education and sports activities',
+               'schedule': 'Mondays, Wednesdays, Fridays, 2:00 PM - 3:00 PM',
+               'max_participants': 30,
+               'participants': ['john@mergington.edu', 'olivia@mergington.edu']},
+ 'Tennis Match': {'description': 'Learn strategies and compete in chess tournaments',
+                  'schedule': 'Fridays, 3:30 PM - 5:00 PM',
+                  'max_participants': 12,
+                  'participants': []},
+ 'Swimming Session': {'description': 'Learn strategies and compete in chess tournaments',
+                      'schedule': 'Fridays, 3:30 PM - 5:00 PM',
+                      'max_participants': 12,
+                      'participants': []},
+ 'Watercolor Workshop': {'description': 'Learn strategies and compete in chess tournaments',
+                         'schedule': 'Fridays, 3:30 PM - 5:00 PM',
+                         'max_participants': 12,
+                         'participants': []},
+ 'Theater Improv': {'description': 'Learn strategies and compete in chess tournaments',
+                    'schedule': 'Fridays, 3:30 PM - 5:00 PM',
+                    'max_participants': 12,
+                    'participants': []},
+ 'Math Puzzle Club': {'description': 'Learn strategies and compete in chess tournaments',
+                      'schedule': 'Fridays, 3:30 PM - 5:00 PM',
+                      'max_participants': 12,
+                      'participants': []},
+                           'schedule': 'Fridays, 3:30 PM - 5:00 PM',
+                           'max_participants': 12,
+                           'participants': []}}
 
 
 @app.get("/")
